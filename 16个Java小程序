@@ -1,0 +1,296 @@
+1
+public class add{
+ public static void main(String args[]){
+  String a,b,c;
+  a="Hello World!";
+  b="from all students of";
+  c="2015";
+  System.out.println(a+b+c);  
+ }
+}
+2
+import java.awt.*;
+import java.applet.Applet;
+public class javademo extends Applet{
+ public void paint(Graphics g){
+  String a,b,c,d;
+  a="Hello World!";
+  b="from all students of";
+  c=" 2007";
+  d=a+b+c;
+  g.drawString(d,60,30);
+ }
+}
+3
+public class javademo{
+ public static void main(String args[]){
+  int i,j;
+  int h=7;
+  int yanghui[][]=new int[7][];
+  System.out.println("杨辉三角形");
+  for(i=0;i<yanghui.length;i++){yanghui[i]=new int[i+1];yanghui[0][0]=1;}
+  for(i=1;i<yanghui.length;i++){
+    yanghui[i][0]=1;
+    for(j=1;j<yanghui[i].length-1;j++){yanghui[i][j]=yanghui[i-1][j-1]+yanghui[i-1][j];}
+    yanghui[i][yanghui[i].length-1]=1;
+  }
+  for(i=0;i<yanghui.length;i++){
+    for(j=0;j<yanghui[i].length;j++)
+      System.out.print(yanghui[i][j]+" ");
+    System.out.println();
+  }
+  }
+}
+4
+public class javademo{
+ public static void main(String args[]){
+  int i,j;
+  int h=7;
+  int yanghui[][]=new int[7][];
+  System.out.println("杨辉三角形");
+  for(i=0;i<yanghui.length;i++){yanghui[i]=new int[i+1];yanghui[0][0]=1;}
+  for(i=1;i<yanghui.length;i++){
+    yanghui[i][0]=1;
+    for(j=1;j<yanghui[i].length-1;j++){yanghui[i][j]=yanghui[i-1][j-1]+yanghui[i-1][j];}
+    yanghui[i][yanghui[i].length-1]=1;
+  }
+  for(i=0;i<yanghui.length;i++){
+    for(int k=0;k<2*(yanghui.length-i)-1;k++){System.out.print(" ");}
+    for(j=0;j<yanghui[i].length;j++)
+      System.out.print(yanghui[i][j]+"   ");
+    System.out.println();
+  }
+  }
+5
+public class javademo{
+public static void main(String args[]){
+  int f1=1,f2=2,f,n=24;
+  System.out.println("第1个月兔子对数："+f1);
+  System.out.println("第2个月兔子对数："+f2);
+  for(int i=3;i<=24;i++){
+    f=f2;
+    f2=f1+f2;
+    f1=f;
+    System.out.println("第"+i+"个月兔子对数："+f2);
+  
+}
+}
+}
+6
+public class javademo{
+  public static void main(String args[]){
+    int count=0;
+    for(int i=101;i<200;i+=2){
+      boolean b=false;
+      for(int j=2;j<Math.sqrt(i);j++){
+        if(i%j==0){b=false;break;}
+        else b=true;
+      }
+      if(b==true){count++;System.out.print(i+" ");}
+    }
+    System.out.print("\n素数的个数为：\n"+count);
+ }
+}
+7
+public class javademo{
+ public static void main(String args[]){
+   int b1,b2,b3;
+   for(int i=100;i<1000;i++){
+     b1=i%10;
+     b2=i%100/10;
+     b3=i/100;
+     if(i==b1*b1*b1+b2*b2*b2+b3*b3*b3){
+        System.out.println(+i+"是一个水仙花数"); 
+     }
+   }
+ }
+}
+8
+import java.util.*;
+public class javademo{
+  public static void main(String args[]){
+  Scanner s=new Scanner(System.in);
+  System.out.println("请输入一个正整数");
+  int n=s.nextInt();
+  int k=2;
+  System.out.print(n+"=");
+  while(k<=n){
+    if(k==n){System.out.println(n);break;}
+    else if(n%k==0){System.out.print(k+"*");n=n/k;}
+         else k++;
+  }
+ }
+}
+9
+import java.util.*;
+public class javademo{
+  public static void main(String args[]){
+  Scanner s=new Scanner(System.in);
+  System.out.println("请输入一个正整数");
+  int n=s.nextInt();
+  char grade=n>=90? 'A':n>=60?'B':'C';
+  System.out.println("该生等级为"+grade);
+ }
+}
+10
+ import java.util.*;
+public class javademo{
+  public static void main(String args[]){
+  int a,b,m;
+  Scanner s=new Scanner(System.in);
+  System.out.println("请输入一个数：");
+  a=s.nextInt();
+  System.out.println("请输入另一个数：");
+  b=s.nextInt();
+  deff de=new deff();
+  m=de.deff(a,b);
+  int n=a*b/m;
+  System.out.println("最大公约数为："+m);
+  System.out.println("最大公倍数为："+n);
+  }
+}
+class deff{
+    public int deff(int x,int y){
+    int t,k;
+    if(x<y){t=x;x=y;y=t;}
+    while(y!=0){
+      if(x==y){return x;}
+      else{k=x%y;x=y;y=k;}
+    }
+    return x;
+  }
+}
+
+import java.util.*;
+public class javademo{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("请输入数a：");
+    int a=s.nextInt();
+    System.out.println("请输入相加项数：");
+    int n=s.nextInt();
+    int sum=0,b=0;
+    for(int i=0;i<n;i++){
+      b=b+a;
+      sum=sum+b;
+      a=10*a;
+    }
+    System.out.println(sum);
+  }
+}
+11
+public class javademo{
+  public static void main(String args[]){
+    System.out.println("1000以内的完数有：");
+    for(int i=1;i<1000;i++){
+      int t=0;
+      for(int j=1;j<=i/2;j++){if(i%j==0)t=t+j;}
+      if(i==t)
+        System.out.print(i+" ");
+    }
+  }
+}
+12
+public class javademo{
+  public static void main(String args[]){
+    int h=100,s=100;
+    for(int i=1;i<10;i++){
+      s=s+h;
+      h=h/2;
+      System.out.println("第"+(i+1)+"次下落经过的路程："+s);
+      System.out.println("第"+(i+1)+"次弹起的高度："+h/2);
+    }
+  }
+}
+13
+public class javademo{
+  public static void main(String args[]){
+    int count=0;
+    int c;
+    for(int i=1;i<5;i++)
+      for(int j=1;j<5;j++)
+        for(int k=1;k<5;k++){
+          if(i!=j&&i!=k&&j!=k){
+            count++;
+            c=100*i+10*j+k;
+            System.out.print(c+" ");
+            if(count%10==0){System.out.println();}
+          }
+        }
+    System.out.println("\n符合要求的数个数为："+count);
+  }
+}
+14
+import java.applet.*;
+import java.awt.*;
+public class javademo extends Applet{
+ Image img;
+ public void init(){
+  img=getImage(getCodeBase(),"w.jpg");
+ }
+ public void paint(Graphics g){
+  int w=img.getWidth(this);
+  int h=img.getHeight(this);
+  g.drawImage(img,20,40,this);
+  g.drawImage(img,100,100,w/2,h/2,this);
+  g.drawImage(img,160,10,2*w,2*h,this);
+}
+}
+15
+import java.applet.*;
+import java.awt.*;
+public class MoveDemo extends Applet{
+       Image sky;
+       int x=10;
+       public void init(){
+         sky=getImage(getCodeBase(),"China.jpg");
+       }
+       public void paint(Graphics g){
+         g.drawImage(sky,x,0,this);
+         try{
+             Thread.sleep(500);
+             x=x+15;
+             if(x==10000){
+                x=10;
+                Thread.sleep(1000);
+             }}catch(Exception e){}
+       repaint();
+       }
+}
+16
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.Applet;
+import java.applet.AudioClip;
+public class SoundPlay extends Applet implements ItemListener,ActionListener{
+  AudioClip sound;
+  Choice c=new Choice();
+  Button play=new Button("播放");
+  Button loop=new Button("连续");
+  Button stop=new Button("停止");
+  public void init(){
+    c.add("背景音乐 - Mid.wav");
+    //c.add("不得不爱 Wav 铃音.wav");
+    c.add("王杰 - 一场游戏一场梦 - 伤心几分痴 粤语版 Wav8.wav");
+    c.add("两只小蜜蜂 - For Wav.wav");
+    //c.add("夏伤.wav");
+    add(c);
+    c.addItemListener(this);
+    add(play);
+    add(loop);
+    add(stop);
+    play.addActionListener(this);
+    loop.addActionListener(this);
+    stop.addActionListener(this);
+    sound=getAudioClip(getCodeBase(),"背景音乐 - Mid.wav");
+  }
+  public void itemStateChanged(ItemEvent e){
+    sound.stop();
+    sound=getAudioClip(getCodeBase(),c.getSelectedItem());
+  }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource()==play) sound.play();
+    else if(e.getSource()==loop) sound.loop();
+    else if(e.getSource()==stop) sound.stop();
+  }
+}
